@@ -1,5 +1,5 @@
-# Stock Analysis Web-Application
-
+# SVNIT - Team 11
+## Stock Analysis Web-Application
 A MERN application that allows users to analyze the sentiment of the specific stock.
 User will have the ability to search different stocks basesd on symbols and view the details and OHLC charts in real time.
 We provided facility for user to filter stock details based on weekly and monthly changes. 
@@ -9,43 +9,32 @@ User can see additional information on the selected stocks company.
 
 ### Major Tech Stack & Dependencies:
 
-
-   `React.JS`
-  </br>
-  `Material UI`
-  </br>
-  `D3`
-  </br>
-  `Apexcharts.js`
-  </br>
-  `Axios`
-  </br>
-  `Express`
-  </br>
-  `MongoDB`
-  </br>
-  `Mongoose`
-  </br>
-  `cors`
-  </br>
-  `Socket.io`
-</br>
+| FrontEnd | BackEnd |
+| --- | --- |
+| React | Express |
+| Apexcharts | Mongoose |
+| Axios | Nodemon |
+| CORS | Dotenv |
+| Material UI | |
+| D3 | |
+ 
 ### Prerequisites
+
 Must haves:
 - `Node` installed
 - Terminal that supports `Nodejs` and `git commands`.
-- `MongoDB` databse
+- `MongoDB` database
 
 ### Procedure to Install and Use the Appllication
 
-1.Clone repository into your local device using following command:
+1. Clone repository into your local device using following command:
 
 ``` 
 $ git clone  <repository link>
 ```
 </br>
 
-2.Install the dependencies in package.json using following command:
+2. Install the dependencies in package.json using following command:
 
 ```
 $ npm install //Installation of dependencies for backend
@@ -54,8 +43,7 @@ $ cd client npm install //Installation of dependencies for frontend
 
 $ cd ..
 ```
- 
-3.Run Application using following command:
+4. Run Application using following command:
 ###### Run Frontend and Backend together
 ```
 $ npm run dev
@@ -79,12 +67,10 @@ $ npm run server
  
  ###### Run in Producation Mode
  ```
- $ npm start\
+ $ npm start
  ```
  
 ### Design Criteria
-
-
 
 
 
@@ -114,7 +100,7 @@ Functionality:
   </b>
   </br>
   
-Market:
+<!-- Market:
 </br>
 ![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/market.png "Market")
 
@@ -124,4 +110,4 @@ Table (Search/Sort/Select/Pagination):
 
 Trading:
 </br>
-![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/trade.png "Trade Menus")
+![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/trade.png "Trade Menus") -->
