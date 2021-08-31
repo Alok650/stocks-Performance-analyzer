@@ -72,13 +72,80 @@ $ npm run server
  
 ### Design Criteria
 
+We decided to create a unique design for our project. Its a classic MERN App having two modes(development and production) for developer and users. 
+The project has two parts backend and frontend. The client part in code structure shown is the frontend part where all the task related to rendering data was done and a preety nice UI was created. React is a free and open-source front-end JavaScript library for building user interfaces or UI components which is used here.
+For making charts from the JSON file provided to us we used Apexcharts library which provides many options of graps according to our requirement. To provide real-time update of stocks we can also use socket.io . We have also taught to develop it further by providing features to buy and sell stocks and prediction of which stocks to buy using ML. Also to make it more competitive we can also make possible for user to see information about that particular stock company and provide its comparision to other related company with charts and stocks value comparision. 
+
+We connected to the MongoDB database in the backend for addition and deletion of data related to stocks to make data access more dynamic. Moreever, the search history of the users stock was also stored in this database for future referal. We also added several routes to allow movement to different parts of the website. Additional information related to the stocks company was fetched using public API's. Also to handel in frontend and backend independently in future we can use third party APIs handling app like POSTMAN, etc to maintain APIs. 
 
 
-### Project Description in Detail:
+### Code Structure
+
+    .
+    ├── client
+    │   ├── build
+    │   │   ├── asset-manifest.json
+    │   │   ├── favicon.ico
+    │   │   ├── index.html
+    │   │   ├── manifest.json
+    │   │   ├── service-worker.js
+    │   │   └── static
+    │   │       ├── css
+    │   │       │   ├── main.f691cc0e.css
+    │   │       │   └── main.f691cc0e.css.map
+    │   │       └── js
+    │   │           ├── main.68051522.js
+    │   │           └── main.68051522.js.map
+    │   ├── package.json
+    │   ├── package-lock.json
+    │   ├── public
+    │   │   ├── favicon.ico
+    │   │   ├── index.html
+    │   │   └── manifest.json
+    │   ├── README.md
+    │   └── src
+    │       ├── actions
+    │       │   └── actions.js
+    │       ├── App.css
+    │       ├── App.js
+    │       ├── App.test.js
+    │       ├── Components
+    │       │   ├── StockCard.js
+    │       │   ├── StockCards.js
+    │       │   ├── StockChart.js
+    │       │   ├── StockSelect.js
+    │       │   ├── TickerItem.js
+    │       │   └── Ticker.js
+    │       ├── index.css
+    │       ├── index.js
+    │       ├── logo.svg
+    │       ├── reducers
+    │       │   ├── date.js
+    │       │   ├── index.js
+    │       │   ├── stocks.js
+    │       │   └── ticker.js
+    │       ├── registerServiceWorker.js
+    │       ├── StateLoader.js
+    │       ├── store.js
+    │       ├── styles
+    │       │   └── index.css
+    │       └── utils
+    │           └── helpers.js
+    ├── controllers
+    │   └── stock-controller.js
+    ├── models
+    │   ├── state.js
+    │   └── symbols.js
+    ├── package.json
+    ├── package-lock.json
+    ├── Procfile
+    ├── README.md
+    ├── server.js
+    ├── start-client.js
+    └── test-client.js
 
 
-
-Functionality:
+### Functionality:
 </br>
 <b>
  </br>
@@ -86,9 +153,9 @@ Functionality:
   </br>
   *<i> Table pagination/select/sort/search<i> 
  </br>
-  *<i> View Poll Archive</i>
+  *<i> View stocks Archive</i>
   </br>
-   *<i>Vite Poll Showcase</i>
+   *<i>View Stocks Showcase</i>
  </br>
   *<i>Show Poll Statistics (Views, Link, Date Published, Etc...)</i>
    </br>
@@ -96,18 +163,7 @@ Functionality:
   </br>
    *<i>Loading Screen Spinners</i>
  </br>
-  
   </b>
   </br>
   
-<!-- Market:
-</br>
-![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/market.png "Market")
 
-Table (Search/Sort/Select/Pagination):
-</br>
-![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/search.png "Table")
-
-Trading:
-</br>
-![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/trade.png "Trade Menus") -->
