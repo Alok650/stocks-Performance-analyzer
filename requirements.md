@@ -16,4 +16,4 @@
   - Can show a line graph for each stock
   - x: time, y: stock_value
   - use a nice library for graphs
-  - show graphs for only selected stocks
+  - show graphs for only selected stocks 
