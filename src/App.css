@@ -1,11 +1,20 @@
 .container{
   margin-top: 30px !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 30px !important;
 }
 
 .card-header{
-  background: #4a4a4a;
-  border-radius: 1px;
+  background: #11998e;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+
+.table tr:nth-of-type(even){
+  background-color: lightcyan;
+}
+
+.body{
+  background-color: #f3f6f8;
 }
 
 .card-header-title{

@@ -13,7 +13,7 @@ const StocksList = (props) => {
           <Detector
             render={({ online }) => (
               <span className={online ? "tag is-success" : "tag is-danger"}>
-                {online ? "Live" : "Offline"}
+                {online ? "Active" : "Offline"}
               </span>
             )}
           />

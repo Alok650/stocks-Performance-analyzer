@@ -3,6 +3,7 @@ import * as bulma from "reactbulma";
 import StocksList from "./StocksList.jsx";
 import StocksGraph from "./StocksGraph.jsx";
 import StocksLoaderStatus from "./StocksLoaderStatus.jsx";
+import Topnavigation from './Appbar'
 
 const stocksUrl = 'ws://stocks.mnet.website/';
 
@@ -74,6 +75,10 @@ class Dashboard extends React.Component {
 
   render() {
     return (
+      <div className="dashboard">
+      <div className="dashboard__header">
+      <Topnavigation/>
+      </div>
       <div className='container'>
         <div className='columns'>
           <StocksList
@@ -91,6 +96,10 @@ class Dashboard extends React.Component {
             <StocksLoaderStatus connectionError={this.state.connectionError} />
           </div>
         </div>
+      </div>
+      <div className="dashboard__footer">
+        footer
+      </div>
       </div>
     );
   }

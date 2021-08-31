@@ -1,40 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Dashboard from './components/Dashboard.jsx'
 import UnsafeScriptsWarning from "./components/UnsafeScriptsWarning";
 
-class App extends Component {
+function App() {
+  const[hasError, sethasError] = useState(false);
+  const[showSpinner, setshowSpinner] = useState(true);
 
-  state = {
-    hasError: false,
-    showSpinner: true
-  }
-
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
+  const getDerivedStateFromError = (error) => {
     console.log('some error has occured');
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
-    // You can also log the error to an error reporting service
-    console.log(error, info);
+  const hideSpinner = () => {
+   setshowSpinner(false);
   }
 
-  hideSpinner = () => {
-    this.setState({showSpinner: false});
+  if (hasError) {
+      return <UnsafeScriptsWarning />
   }
-
-  render() {
-    if (this.state.hasError) {
-      return <UnsafeScriptsWarning />;
-    }
-    return (
-      <div className="App">
-        <Dashboard hideSpinner={this.hideSpinner} showSpinner={this.state.showSpinner} />
-      </div>
-    );
-  }
+  return (
+    <div>
+       <div className="App">
+        <Dashboard hideSpinner={hideSpinner} showSpinner={showSpinner} />
+      </div>     
+    </div>
+  )
 }
 
 export default App;
