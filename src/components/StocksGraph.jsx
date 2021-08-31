@@ -2,6 +2,7 @@ import React from 'react'
 import {Line} from 'react-chartjs-2';
 import * as zoom from 'chartjs-plugin-zoom'
 import { chartJsConfig, chartColors, chartDataset } from '../chartConfig.js'
+import Graphselector from './Graphselect'
 import { FormControl, MenuItem, Select, Card, CardContent} from '@material-ui/core';
 
 class StocksGraph extends React.Component {
@@ -81,13 +82,7 @@ class StocksGraph extends React.Component {
         </div>
         <div className='card-content'>
           <div className="graph-menu">
-          <FormControl>
-            <Select value = 'Graph'>
-              <MenuItem value= "linegraph">Bar chart</MenuItem>
-              <MenuItem value= "linegraph">Histogram</MenuItem>
-              <MenuItem value= "linegraph">Other</MenuItem>
-            </Select>
-          </FormControl>
+            <Graphselector/>
           </div>
           <p className='is-size-7 has-text-info'>
             {
