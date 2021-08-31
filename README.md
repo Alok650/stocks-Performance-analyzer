@@ -1,25 +1,127 @@
-A demo application built in React.
+# Stock Analysis Web-Application
 
-Deployed here:http://stocksdemo.herokuapp.com)
+A MERN application that allows users to analyze the sentiment of the specific stock.
+User will have the ability to search different stocks basesd on symbols and view the details and OHLC charts in real time.
+We provided facility for user to filter stock details based on weekly and monthly changes. 
+Stocks can be analysed in different graph formats such as OHLC, Candlestick charts, Colored Bar, Vertex Line and Hollow Candle.
+User can see additional information on the selected stocks company. 
 
-What it does: Show real time stock market data (fake, random data, just to simulate) in the form of table and graphs
 
-Subscribes to a Websocket(ws://stocks.mnet.website/) to fetch simulated stock market data.
+### Major Tech Stack & Dependencies:
 
-Features:
-  - A table showing data for all the stocks
-  - Each row shows:
-    - The latest stock price. (With color relative to the previous stock value)
-    - A sparkline showing the changes in stock values (Without considering the time factor)
-    - When was the specific stock last updated
-  - Market Trend arrow indicating how stock values behaved
-  - Ability to select any stocks, to be shown in the Graph
-  - Graphs can show historical values wrt time for any stocks selected
-  - Can zoom/pan over graph, Reset the zoom
-  - Clear history of all stocks with the click of a button
-  - Handles connection errors
+
+   `React.JS`
+  </br>
+  `Material UI`
+  </br>
+  `D3`
+  </br>
+  `Apexcharts.js`
+  </br>
+  `Axios`
+  </br>
+  `Express`
+  </br>
+  `MongoDB`
+  </br>
+  `Mongoose`
+  </br>
+  `cors`
+  </br>
+  `Socket.io`
+</br>
+### Prerequisites
+Must haves:
+- `Node` installed
+- Terminal that supports `Nodejs` and `git commands`.
+- `MongoDB` databse
+
+### Procedure to Install and Use the Appllication
+
+1.Clone repository into your local device using following command:
+
+``` 
+$ git clone  <repository link>
+```
+</br>
+
+2.Install the dependencies in package.json using following command:
+
+```
+$ npm install //Installation of dependencies for backend
+
+$ cd client npm install //Installation of dependencies for frontend
+
+$ cd ..
+```
+ 
+3.Run Application using following command:
+###### Run Frontend and Backend together
+```
+$ npm run dev
+```
+ 
+###### Backend only
+```
+$ npm run server
+```
+ 
+ ###### Frontend only
+ ```
+ $ npm run client
+ ```
+ 
+ ###### Build client
+ ```
+ $ cd client
+ $ npm run build
+ ```
+ 
+ ###### Run in Producation Mode
+ ```
+ $ npm start\
+ ```
+ 
+### Design Criteria
+
+
+
+
+
+### Project Description in Detail:
+
+
+
+Functionality:
+</br>
+<b>
+ </br>
+  *<i> Interactable D3 Candle Charts </i>
+  </br>
+  *<i> Table pagination/select/sort/search<i> 
+ </br>
+  *<i> View Poll Archive</i>
+  </br>
+   *<i>Vite Poll Showcase</i>
+ </br>
+  *<i>Show Poll Statistics (Views, Link, Date Published, Etc...)</i>
+   </br>
+   *<i>Scalable Pagination</i>
+  </br>
+   *<i>Loading Screen Spinners</i>
+ </br>
   
-Possible Enhancements: ([See issues](https://github.com/virajvchavan/stocks/issues))
-  - An option to export the historical data of the selected stocks
-  - Show Highs and Lows of individual stocks
-  - A graph that can show aggregated condition for the overall market
+  </b>
+  </br>
+  
+Market:
+</br>
+![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/market.png "Market")
+
+Table (Search/Sort/Select/Pagination):
+</br>
+![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/search.png "Table")
+
+Trading:
+</br>
+![Alt text](https://github.com/DanielLopezCS/React-Stock-Trading-Simulator/blob/master/Screenshots/trade.png "Trade Menus")
