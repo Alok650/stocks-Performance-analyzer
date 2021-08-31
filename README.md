@@ -2,7 +2,7 @@
 ## Stock Analysis Web-Application
 A MERN application that allows users to analyze the sentiment of the specific stock.
 User will have the ability to search different stocks basesd on symbols and view the details and OHLC charts in real time.
-We provided facility for user to filter stock details based on weekly and monthly changes. 
+We provided facility for user to filter stock details based on time(weekly and monthly by scrolling) changes. 
 Stocks can be analysed in different graph formats such as OHLC, Candlestick charts, Colored Bar, Vertex Line and Hollow Candle.
 User can see additional information on the selected stocks company. 
 
