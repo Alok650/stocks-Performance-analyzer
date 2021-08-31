@@ -70,13 +70,13 @@ $ npm run server
  $ npm start
  ```
  
-### Design Criteria
+### Design Criteria and Scalability ideas
 
 We decided to create a unique design for our project. Its a classic MERN App having two modes(development and production) for developer and users. 
 The project has two parts backend and frontend. The client part in code structure shown is the frontend part where all the task related to rendering data was done and a preety nice UI was created. React is a free and open-source front-end JavaScript library for building user interfaces or UI components which is used here.
 For making charts from the JSON file provided to us we used Apexcharts library which provides many options of graps according to our requirement. To provide real-time update of stocks we can also use socket.io . We have also taught to develop it further by providing features to buy and sell stocks and prediction of which stocks to buy using ML. Also to make it more competitive we can also make possible for user to see information about that particular stock company and provide its comparision to other related company with charts and stocks value comparision. 
 
-We connected to the MongoDB database in the backend for addition and deletion of data related to stocks to make data access more dynamic. Moreever, the search history of the users stock was also stored in this database for future referal. We also added several routes to allow movement to different parts of the website. Additional information related to the stocks company was fetched using public API's. Also to handel in frontend and backend independently in future we can use third party APIs handling app like POSTMAN, etc to maintain APIs. 
+We can further connect MongoDB database in the backend for addition and deletion of data related to stocks to make data access more dynamic. Moreever, the search history of the users stock can also be stored in this database for future referal. We also added several routes to allow movement to different parts of the website. Additional information related to the stocks company was fetched using public API's. Also to handel in frontend and backend independently in future we can use third party APIs handling app like POSTMAN, etc to maintain APIs. There are many more things we can do in this app.
 
 
 ### Code Structure
