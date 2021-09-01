@@ -166,6 +166,6 @@ We can further connect MongoDB database in the backend for addition and deletion
   </b>
   </br>
   
-  ![My image](http://url/to/image.jpg)
+  ![My image]https://github.com/Alok650/stocks.git/img.png)
   
 
