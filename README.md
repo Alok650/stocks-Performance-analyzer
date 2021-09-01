@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+# SVNIT - Team 11
+## Stock Analysis Web-Application
+A MERN application that allows users to analyze the sentiment of the specific stock.
+User will have the ability to search different stocks based on symbols and view the details and OHLC charts in real time.
+We provided facility for user to filter stock details based on time(weekly and monthly by scrolling) changes. 
+Stocks can be analysed in different graph formats such as OHLC, Candlestick charts, Colored Bar, Vertex Line and Hollow Candle.
+User can see additional information on the selected stocks company. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Major Tech Stack & Dependencies:
 
-In the project directory, you can run:
+| FrontEnd | BackEnd |
+| --- | --- |
+| React | Express |
+| Apexcharts | Mongoose |
+| Axios | Nodemon |
+| CORS | Dotenv |
+| Material UI | |
+| D3 | |
+ 
+### Prerequisites
 
-### `yarn start`
+Must haves:
+- `Node` installed
+- Terminal that supports `Nodejs` and `git commands`.
+- `MongoDB` database
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Procedure to Install and Use the Appllication
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone repository into your local device using following command:
 
-### `yarn test`
+``` 
+$ git clone  <repository link>
+```
+</br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install the dependencies in package.json using following command:
 
-### `yarn build`
+```
+$ npm install //Installation of dependencies for backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+$ cd client npm install //Installation of dependencies for frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+$ cd ..
+```
+4. Run Application using following command:
+###### Run Frontend and Backend together
+```
+$ npm run dev
+```
+ 
+###### Backend only
+```
+$ npm run server
+```
+ 
+ ###### Frontend only
+ ```
+ $ npm run client
+ ```
+ 
+ ###### Build client
+ ```
+ $ cd client
+ $ npm run build
+ ```
+ 
+ ###### Run in Producation Mode
+ ```
+ $ npm start
+ ```
+ 
+### Design Criteria and Scalability ideas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We decided to create a unique design for our project. Its a classic MERN App having two modes(development and production) for developer and users. 
+The project has two parts backend and frontend. The client part in code structure shown is the frontend part where all the task related to rendering data was done and a preety nice UI was created. React is a free and open-source front-end JavaScript library for building user interfaces or UI components which is used here.
+For making charts from the JSON file provided to us we used Apexcharts library which provides many options of graps according to our requirement. To provide real-time update of stocks we can also use socket.io . We have also taught to develop it further by providing features to buy and sell stocks and prediction of which stocks to buy using ML. Also to make it more competitive we can also make possible for user to see information about that particular stock company and provide its comparision to other related company with charts and stocks value comparision. 
 
-### `yarn eject`
+We can further connect MongoDB database in the backend for addition and deletion of data related to stocks to make data access more dynamic. Moreever, the search history of the users stock can also be stored in this database for future referal. We also added several routes to allow movement to different parts of the website. Additional information related to the stocks company was fetched using public API's. Also to handel in frontend and backend independently in future we can use third party APIs handling app like POSTMAN, etc to maintain APIs. There are many more things we can do in this app.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Code Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    .
+    ├── client
+    │   ├── build
+    │   │   ├── asset-manifest.json
+    │   │   ├── favicon.ico
+    │   │   ├── index.html
+    │   │   ├── manifest.json
+    │   │   ├── service-worker.js
+    │   │   └── static
+    │   │       ├── css
+    │   │       │   ├── main.f691cc0e.css
+    │   │       │   └── main.f691cc0e.css.map
+    │   │       └── js
+    │   │           ├── main.68051522.js
+    │   │           └── main.68051522.js.map
+    │   ├── package.json
+    │   ├── package-lock.json
+    │   ├── public
+    │   │   ├── favicon.ico
+    │   │   ├── index.html
+    │   │   └── manifest.json
+    │   ├── README.md
+    │   └── src
+    │       ├── actions
+    │       │   └── actions.js
+    │       ├── App.css
+    │       ├── App.js
+    │       ├── App.test.js
+    │       ├── Components
+    │       │   ├── StockCard.js
+    │       │   ├── StockCards.js
+    │       │   ├── StockChart.js
+    │       │   ├── StockSelect.js
+    │       │   ├── TickerItem.js
+    │       │   └── Ticker.js
+    │       ├── index.css
+    │       ├── index.js
+    │       ├── logo.svg
+    │       ├── reducers
+    │       │   ├── date.js
+    │       │   ├── index.js
+    │       │   ├── stocks.js
+    │       │   └── ticker.js
+    │       ├── registerServiceWorker.js
+    │       ├── StateLoader.js
+    │       ├── store.js
+    │       ├── styles
+    │       │   └── index.css
+    │       └── utils
+    │           └── helpers.js
+    ├── controllers
+    │   └── stock-controller.js
+    ├── models
+    │   ├── state.js
+    │   └── symbols.js
+    ├── package.json
+    ├── package-lock.json
+    ├── Procfile
+    ├── README.md
+    ├── server.js
+    ├── start-client.js
+    └── test-client.js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Functionality:
+</br>
+<b>
+ </br>
+  *<i> Interactable D3 Candle Charts </i>
+  </br>
+  *<i> Table pagination/select/sort/search<i> 
+ </br>
+  *<i> View stocks Archive</i>
+  </br>
+   *<i>View Stocks Showcase</i>
+ </br>
+  *<i>Show Poll Statistics (Views, Link, Date Published, Etc...)</i>
+   </br>
+   *<i>Scalable Pagination</i>
+  </br>
+   *<i>Loading Screen Spinners</i>
+ </br>
+  </b>
+  </br>
+  
+  ![My image](https://github.com/Alok650/stocks/blob/main/np-img.jpeg)
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
